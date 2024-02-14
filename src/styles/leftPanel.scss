@@ -1,0 +1,117 @@
+.left-panel {
+    // background: #15202b;
+    background: #171717;
+    color: #fff;
+    min-height: 100vh;
+    border-right: 1px solid #2F3336;
+
+    .container{
+        position: fixed;
+    }
+
+    header svg{
+        height: 1.9em;
+        margin: 0.7em 4em;
+    
+    }
+    
+    nav {
+        padding-left: 3.3em;
+
+        .selected{
+            color: #1da1f2;
+            font-weight: bold;
+            font-size: x-large;
+        }
+    }
+    
+    nav svg {
+        height: 1.3em;
+        margin-right:0.9em ;
+    }
+    
+    nav > *, button.more {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 1.3rem;
+        font-weight: 500;
+        width: 100%;
+    
+        span {
+            display: flex;
+            color: #fff;
+            align-items: center;
+            height: 2.7em;
+            width: fit-content;
+            padding: 0 0.7em;
+        }
+    
+        &:hover span{
+        color: #1da1f2;
+        border-radius: 1.5em;
+        background: #192734;
+    }
+    
+    }
+ 
+    
+    button {
+        background: unset;
+        border: unset;
+    }
+    button.tweet{
+        display: block;
+        background: #1da1f2;
+        color: #fff;
+        width: 14em;
+        height: 3em;
+        border-radius: 1.5em;
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-left: 3.7em;
+        cursor: pointer;
+    
+        &:hover{
+           background:#0f90e5 ; 
+        }
+    }
+
+    footer{
+        position: fixed;
+        bottom: 1.5em;
+        margin-left: 0.5em;
+
+        button.account{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            color: #fff;
+            font-size: 1em;
+
+            .photo{
+                border-radius: 100%;
+                height: 2.5em;
+                width: 2.5em;
+                background: #192734;
+                margin-left: 3.5em;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .name{
+                font-weight: 700;
+            }
+            .username{
+                color: #8899a6;
+                font-size: 0.8em;
+            }
+        }
+    }
+    
+}
+
