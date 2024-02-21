@@ -3,6 +3,7 @@ import './App.scss'
  import LeftPanel from './components/LeftPanel'
 import HomePage from './pages/HomePage'
 import Profile from './pages/Profile'
+import RigthPanel from './components/RigthPanel'
 
 
 function App() {
@@ -26,7 +27,9 @@ function App() {
           </Routes>
         </div>
 
-       <div className='right-panel'>right</div>
+       <div className='right-panel'>
+          <RigthPanel/>
+        </div>
 
       </div>
   )

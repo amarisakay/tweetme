@@ -1,6 +1,25 @@
+import { useRef } from 'react';
 import {calendar, gif, homeHappyned, imgIcon, imoji, poll} from './icon'
+import Api from '../api/api';
+import { ENDPOINT } from '../api/routes';
 
 const CardHomeHeader = () => {
+    
+    const inputRef = useRef(null);
+    const { useApi, data, error } = Api();
+
+    const handleClick = async() => {
+        const inputValue = inputRef.current.value;
+        const object = {
+            "title": "mon titre",
+            "content": inputValue,
+            "authorId": 2
+        }
+
+        await useApi('POST',ENDPOINT.addTweet,object)
+        inputRef.current.value = ''
+    };
+
     return (
         <div className='wrapper'>
             <div className='header-home'>
@@ -17,6 +36,7 @@ const CardHomeHeader = () => {
                 <div className='containere'>
                     <div>
                         <input
+                            ref={inputRef}
                             placeholder='What’s happening?'
                         />
                     </div>
@@ -29,7 +49,7 @@ const CardHomeHeader = () => {
                             <span>{calendar}</span>
 
                         </div>
-                        <button className='tweet'>tweet</button>
+                        <button className='tweet' onClick={handleClick}>tweet</button>
                     </div>
                     
                 </div>
